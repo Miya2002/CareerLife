@@ -10,7 +10,7 @@ if (!isset ($_SESSION['user_id'])) {
   exit();
 
 } else if (($_SESSION['account_type'] !== 'jobseeker')) {
-  header('Location: /workiee_jobportal');
+  header('Location: /CareerLife');
   exit();
 }
 // Get the current user's ID from the session
@@ -66,7 +66,7 @@ if (!isset ($profile)) {
             <label class="block text-gray-700 text-sm mb-2" for="name">Full Name</label>
             <input
               class="appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500"
-              type="text" id="full_name" name="full_name" placeholder="Sarfaraz U" autofocus>
+              type="text" id="full_name" name="full_name" placeholder="your name" autofocus>
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 text-sm mb-2" for="resume">Resume Path</label>
@@ -95,7 +95,7 @@ if (!isset ($profile)) {
               cols="" rows="10"></textarea>
           </div>
           <div>
-            <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-3 rounded" type="submit">Create
+            <button class="bg-black hover:bg-gray-700 text-white py-2 px-3 rounded" type="submit">Create
               Profile</button>
           </div>
       </form>
@@ -141,9 +141,7 @@ if (!isset ($profile)) {
       </ul>
     </div>
     <div class="flex-1 hidden md:block px-6 xl:py-6">
-      <img alt="Party"
-        src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        class="" />
+    <a href="https://ibb.co/F30WjYM"><img src="https://i.ibb.co/Pj9YfWn/young-businessman-with-clipboard.jpg" alt="young-businessman-with-clipboard" border="0"></a>
     </div>
   </main>
 
@@ -181,7 +179,7 @@ WHERE
   if ($result->num_rows > 0) {
     echo '<div class="relative md:px-12 px-6 mb-6 md:mb-16 overflow-x-auto shadow-md sm:rounded-lg mx-auto max-w-screen-2xl">
     <table class="w-full text-sm text-left text-gray-500">
-        <thead class="text-xs text-white uppercase bg-orange-500">
+        <thead class="text-xs text-white uppercase bg-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
                     Job Title

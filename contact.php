@@ -11,29 +11,27 @@ include ('includes/header.php');
 </head>
 
 <body>
-    <section class="bg-orange-50" id="contact">
+    <section class="bg-gray-100" id="contact">
         <div class="mx-auto max-w-8xl px-6 py-10 sm:px-6 lg:px-10 lg:py-12">
             <div class="md:mb-4 lg:mb-12">
                 <div class="md:mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-14">
-                    <h6 class="text-orange-500 font-bold md:mb-1">CONTACT</h6>
+                    <h6 class="text-gray-500 font-bold md:mb-1">CONTACT</h6>
                     <h2 class="font-heading md:mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
                         Get in Touch
                     </h2>
-                    <!-- <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">Need Any Help Regarding to Workiee!
-                    </p> -->
+                   
                 </div>
             </div>
             <div class="flex items-stretch justify-center mt-2 md:mt-4">
                 <div class="grid md:grid-cols-2">
                     <div class="h-full md:pr-6">
                         <p class="text-center md:text-start md:mt-3 mb-12 text-lg text-gray-600">
-                            Just send us a message our team will be ready to help you in
-                            any case related to Workiee!
+                        Feel free to reach out to us anytime! Our dedicated team is here to assist you with any inquiries or issues you may have regarding CareerL
                         </p>
                         <ul class="mb-6 md:mb-0">
                             <li class="flex">
                                 <div
-                                    class="flex h-10 w-10 items-center justify-center rounded bg-orange-600 text-gray-50">
+                                    class="flex h-10 w-10 items-center justify-center rounded bg-black text-gray-50">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="h-6 w-6">
@@ -52,7 +50,7 @@ include ('includes/header.php');
                             </li>
                             <li class="flex">
                                 <div
-                                    class="flex h-10 w-10 items-center justify-center rounded bg-orange-600 text-gray-50">
+                                    class="flex h-10 w-10 items-center justify-center rounded bg-black text-gray-50">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="h-6 w-6">
@@ -66,13 +64,13 @@ include ('includes/header.php');
                                 <div class="ml-6 mb-6 -mt-1">
                                     <h3 class="mb-1 text-lg font-medium leading-6 text-gray-900 ">Contact
                                     </h3>
-                                    <p class="text-gray-600">Mobile: +92 312-2386670</p>
-                                    <p class="text-gray-600">Mail: adnasir607@gmail.com</p>
+                                    <p class="text-gray-600">Mobile: +92 01534180XX</p>
+                                    <p class="text-gray-600">Mail: tasmiyaansari2002@gmail.com</p>
                                 </div>
                             </li>
                             <li class="flex">
                                 <div
-                                    class="flex h-10 w-10 items-center justify-center rounded bg-orange-600 text-gray-50">
+                                    class="flex h-10 w-10 items-center justify-center rounded bg-black text-gray-50">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="h-6 w-6">
@@ -83,8 +81,8 @@ include ('includes/header.php');
                                 <div class="ml-6 mb-6 -mt-1">
                                     <h3 class="mb-1 text-lg font-medium leading-6 text-gray-900 ">Working
                                         hours</h3>
-                                    <p class="text-gray-600">Monday - Friday: 08:00 - 17:00</p>
-                                    <p class="text-gray-600">Saturday &amp; Sunday: 08:00 - 12:00</p>
+                                    <p class="text-gray-600">Monday - Friday: 07:00 - 16:00</p>
+                                    <p class="text-gray-600">Saturday &amp; Sunday: 09:00 - 11:00</p>
                                 </div>
                             </li>
                         </ul>
@@ -102,10 +100,11 @@ include ('includes/header.php');
 
     <section class="flex lg:py-12 max-w-screen-2xl mx-auto xl:px-6">
         <div class="flex-1 hidden md:block">
-            <img alt="Student"
-                src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="h-56 w-full object-cover sm:h-full" />
+        <a href="https://ibb.co/2qgwVRD"><img src="https://i.ibb.co/Y2p6nJz/group-people-working-new-project-together.jpg" alt="group-people-working-new-project-together" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />
+                
         </div>
+        
+
         <div class="flex-1 card h-fit max-w-xl p-5 md:px-8 lg:px-16 md:py-12 w-full text-center" id="form">
             <h2 class="mb-8 text-2xl font-bold">Ready to Get Started?</h2>
             <form id="contactForm" action="submit_contact.php" method="post">
@@ -132,7 +131,7 @@ include ('includes/header.php');
                 </div>
                 <div class="text-center">
                     <button type="submit"
-                        class=" bg-orange-500 text-white hover:bg-transparent hover:text-black hover:border-black border border-orange-500 hover:border-orange-500 px-6 py-3 font-xl rounded-md sm:mb-0">Send
+                        class=" rounded border border-gray-700 bg-gray-700 sm:bg-transparent  hover:border-black border text-black hover:text-white hover:bg-gray-700   px-6 py-3  focus:outline-none focus:ring active:bg-gray-700">Send
                         Message</button>
                 </div>
             </form>

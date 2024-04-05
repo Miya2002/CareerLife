@@ -5,7 +5,7 @@ include '../../config.php';
 $message = '';
 session_start();
 if (!isset($_SESSION['user_id']) || $_SESSION['account_type'] !== 'recruiter') {
-  header('Location: /workiee_jobportal/account/login.php');
+  header('Location: /CareerLife/account/login.php');
   exit();
 }
 

@@ -6,10 +6,10 @@ session_start();
 // Check if the user is logged in
 if (!isset ($_SESSION['user_id'])) {
     // Redirect to the login page if the user is not logged in
-    header("Location: /workiee_jobportal/account/login.php");
+    header("Location: /CareerLife/account/login.php");
     exit();
 } else if (($_SESSION['account_type'] !== 'recruiter')) {
-    header('Location: /workiee_jobportal');
+    header('Location: /CareerLife');
     exit();
 }
 // Get the current user's ID from the session
@@ -89,7 +89,7 @@ if (!isset ($profile)) {
                     </div>
 
                     <div>
-                        <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-3 rounded" type="submit">Create
+                        <button class=" bg-gray-400 hover:bg-gray-700 text-white py-2 px-3 rounded" type="submit">Create
                             Profile</button>
                     </div>
             </form>
@@ -130,21 +130,19 @@ if (!isset ($profile)) {
         </div>
 
         <div class="flex-1 hidden md:block px-6 xl:py-6">
-            <img alt="Party"
-                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="" />
+        <a href="https://ibb.co/Hd4sh1r"><img src="https://i.ibb.co/9tgLZzq/young-happy-businessman-using-computer-office-celebrating-good-news-there-are-people-background.jpg" alt="young-happy-businessman-using-computer-office-celebrating-good-news-there-are-people-background" border="0"></a>
         </div>
     </main>
 
     <section class="flex flex-col lg:flex-row py-6 lg:py-20 gap-4 max-w-screen-2xl mx-auto">
-        <div class="flex-1 bg-orange-100 rounded-md p-7 md:p-12">
+        <div class="flex-1 bg-gray-300 rounded-md p-7 md:p-12">
             <h3 class="text-3xl mb-4 font-semibold text-black">Jobs By You!</h3>
             <p class="mb-6 text-lg">
                 To maintain high-quality job listings and ensure each position gets the attention it deserves, our platform
                 allows recruiters to post only one job at a time. This policy helps streamline the recruitment process,
                 encouraging a focus on detail and clarity in each job advertisement.</p>
             <a href="postjob"><button
-                    class="px-5 text-sm py-3 bg-white border border-white hover:border-orange-500 text-orange-500  hover:bg-transparent hover:text-black rounded-md transition-all duration-200">Post
+                    class="px-5 text-sm py-3 bg-white border border-white hover:border-gray-700 text-gray-700  hover:bg-transparent hover:text-black rounded-md transition-all duration-200">Post
                     a Job</button></a>
         </div>
         <div class='flex-1'>
@@ -162,7 +160,7 @@ if (!isset ($profile)) {
                                         <p class="text-black text-lg px-2 mb-2">Description: ' . $row["description"] . '</p>
                                         <p class="text-black text-lg px-2 mb-2">Date: ' . $row["created_at"] . '</p>
                     <div class="flex py-3">
-                        <a href="/workiee_jobportal/job-detail?job_id=' . $row['id'] . '"
+                        <a href="/CareerLife/job-detail?job_id=' . $row['id'] . '"
                         <button
                             class="px-5 text-sm py-3 mx-2 bg-orange-500 text-white hover:bg-transparent border border-white hover:border-orange-500 hover:text-black hover:bg-white hover:text-orange-950 rounded-md transition-all duration-200">View
                             Job Link</button></a>

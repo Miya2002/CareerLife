@@ -1,7 +1,7 @@
 <?php
 
 include '../config.php';
-$pageTitle = 'Register - Workiee';
+$pageTitle = 'Register - CareerLife';
 include '../includes/header.php';
 $message = false;
 
@@ -22,25 +22,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $insertSql = "INSERT INTO users (username, email, password, account_type) VALUES ('$username', '$email', '$password', '$accountType')";
 
         if ($conn->query($insertSql) === TRUE) {
-            $message = 'Registered Successfully! <a href="/workiee_jobportal/account/login">Login Now</a>';
+            $message = 'Registered Successfully! <a href="/CareerLife/account/login">Login Now</a>';
         } else {
             echo "Error: " . $insertSql . "<br>" . $conn->error;
         }
     }
 }
 ?>
-<section class="relative flex flex-wrap lg:h-screen lg:items-center max-w-screen-2xl mx-auto">
+
+<section style="margin-top:2%;">
+    <div style="display: flex; justify-content: center; overflow-x: hidden;">
+        <a href="https://ibb.co/LnmnwHH">
+            <img src="https://i.ibb.co/synySzz/young-girl-talking-phone-smiling-camera.jpg" alt="young-girl-talking-phone-smiling-camera" style="max-width: 200%; height: auto;" border="0">
+        </a>
+    </div>
+</section>
+
+
+<section class="relative flex flex-wrap lg:h-screen lg:items-center max-w-screen-2xl mx-auto; " style="margin-left: 30%;">
     <div class="w-full px-6 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
-        <div class="mx-auto max-w-lg text-center">
-            <h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
-            <p class="text-gray-800 text-center py-4"><?php echo $message; ?></p>
-            <p class="mt-4 text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
-                ipsa culpa autem, at itaque nostrum!
+        <div class=" text-center" style="margin-top: -50%;">
+            <h1 class="text-2xl font-bold sm:text-5-xl">Get started today!</h1>
+            <p class="text-gray-800 text-center py-4">
+                <?php echo $message; ?></p>
+            <p class="mt-4 text-gray-500" style="text-align: center;">
+                Get ready to unlock boundless career opportunities and take the next step towards your dream job with CareerLife
             </p>
         </div>
-
-        <form action="#" method="post" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+<br>
+        <form action="#" method="post" class="mx-auto  max-w-md space-y-4"  >
             <div>
                 <label for="username" class="sr-only">Username</label>
 
@@ -96,20 +106,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="flex items-center justify-between">
                 <p class="text-sm text-gray-500">
                     Have Account?
-                    <a class="underline" href="/workiee_jobportal/account/login">Login</a>
+                    <a class="underline" href="/CareerLife/account/login">Login</a>
                 </p>
 
                 <button type="submit"
-                    class="inline-block rounded-lg bg-orange-500 px-7 py-3 text-sm font-medium text-white">
+                    class="inline-block rounded-lg bg-gray-600 hover:bg-transparent hover:text-black px-7 py-3 text-sm font-medium text-white">
                     Register
                 </button>
             </div>
         </form>
     </div>
 
-    <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
-        <img alt="Welcome"
-            src="https://images.unsplash.com/photo-1583674767461-99d1a9850069?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            class="absolute inset-0 h-full w-full object-cover" />
-    </div>
+ 
 </section>

@@ -11,7 +11,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/Workiee-fav.jpg" type="image/x-icon">
     <title>
-        <?php echo isset ($pageTitle) ? $pageTitle : 'Workiee'; ?>
+        <?php echo isset ($pageTitle) ? $pageTitle : 'CareerLife'; ?>
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -40,27 +40,30 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </head>
 
 <body>
-    <nav class="bg-white border border-gray-200 py-2.5 dark:bg-orange-100">
+<nav class="border border-gray-200 py-2.5 dark:bg-zinc-500" style="background-color: rgba(255, 255, 255, 0);">
+
+
+
         <div class="flex flex-wrap items-center justify-between max-w-screen-2xl px-6 mx-auto">
 
             <!-- Mobile -->
 
             <div class="flex items-center justify-between w-full block lg:hidden">
-                <a href="/workiee_jobportal" class="flex items-center hidden md:block ">
-                    <img src="https://i.ibb.co/qrsRr2v/workiee-logo.png" class="h-6 mr-3 sm:h-12" alt="Workiee Logo">
+                <a href="/CareerLife" class="flex items-center hidden md:block ">
+                    <img src="img/career_logo.png" class="h-6 mr-3 sm:h-12" alt="CareerLife Logo">
                 </a>
                 <div>
                     <?php
                     if (isset ($_SESSION['user_id'])) {
                         // User is logged in, show the logout button
-                        echo '<a href="/workiee_jobportal/account/logout.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-orange-600 dark:hover:bg-orange-500 focus:outline-none dark:focus:ring-orange-800">Logout</a>';
+                        echo '<a href="/CareerLife/account/logout.php" class="text-white bg-zinc-500 hover:bg-zinc-600 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-zinc-600 dark:hover:bg-zinc-500 focus:outline-none dark:focus:ring-zinc-800">Logout</a>';
                     } else {
                         // User is not logged in, show the login button
-                        echo '<a href="/workiee_jobportal/account/login" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-orange-600 dark:hover:bg-orange-500 focus:outline-none dark:focus:ring-orange-800">Login</a>';
+                        echo '<a href="/CareerLife/account/login" class="text-white bg-zinc-500 hover:bg-zinc-600 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-zinc-600 dark:hover:bg-zinc-500 focus:outline-none dark:focus:ring-zinc-800">Login</a>';
                     }
                     ?>
-                    <a href="/workiee_jobportal/dashboard"
-                        class="text-white bg-orange-500 hover:bg-orange-600 mx-2 focus:ring-4 focus:ring-orange-300 font-medium rounded-md text-sm px-4 lg:px-6 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-orange-600 dark:hover:bg-orange-500 focus:outline-none dark:focus:ring-orange-800">Account</a>
+                    <a href="/CareerLife/dashboard"
+                        class="text-white bg-zinc-500 hover:bg-zinc-600 mx-2 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md text-sm px-4 lg:px-6 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-zinc-600 dark:hover:bg-zinc-500 focus:outline-none dark:focus:ring-zinc-800">Account</a>
                 </div>
                 <div>
                     <button data-collapse-toggle="mobile-menu-2" type="button"
@@ -84,71 +87,68 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <div id="mobile-menu-2" class="hidden w-full">
                 <ul class="flex flex-col mt-4 font-medium ">
                     <li>
-                        <a href="/workiee_jobportal/"
-                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-orange-500 lg:bg-transparent lg:text-orange-600 lg:p-0 dark:text-white border-b border-gray-300"
+                        <a href="/CareerLife/"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-white hover:bg-gray-100 lg:bg-transparent lg:text-zinc-600 lg:p-0 dark:text-white border-b border-gray-300"
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/companies"
-                            class="<?php echo ($current_page == 'companies.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:hover:text-orange-600 lg:p-0 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Companies</a>
+                        <a href="/CareerLife/companies"
+                            class="<?php echo ($current_page == 'companies.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300 lg:hover:bg-transparent lg:border-0 hover:text-zinc-500 lg:hover:text-zinc-600 lg:p-0 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Companies</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/jobs"
-                            class="<?php echo ($current_page == 'jobs.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300 hover:text-orange-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0  lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Jobs</a>
+                        <a href="/CareerLife/jobs"
+                            class="<?php echo ($current_page == 'jobs.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300 hover:text-zinc-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-zinc-600 lg:p-0  lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Jobs</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/about"
-                            class="<?php echo ($current_page == 'about.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300  hover:text-orange-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0  lg:dark:h over:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                        <a href="/CareerLife/about"
+                            class="<?php echo ($current_page == 'about.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300  hover:text-zinc-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-zinc-600 lg:p-0  lg:dark:h over:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/contact"
-                            class="<?php echo ($current_page == 'contact.php') ? 'dark:text-black ' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300  hover:text-orange-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        <a href="/CareerLife/contact"
+                            class="<?php echo ($current_page == 'contact.php') ? 'dark:text-black ' : 'dark:text-gray-300 ' ?>w-full block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300  hover:text-zinc-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-zinc-600 lg:p-0 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                     </li>
                 </ul>
             </div>
             <!-- laptop -->
 
             <div class="items-center justify-between w-full lg:flex lg:order-1 hidden lg:block">
-                <a href="/workiee_jobportal" class="flex items-center">
-                    <img src="https://i.ibb.co/qrsRr2v/workiee-logo.png" class="h-6 mr-3 sm:h-12" alt="Workiee Logo">
-                    <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-black">Workiee</span> -->
-                </a>
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/YDyR3Yb/career-logo.png" alt="career-logo" border="0" class="h-6 mr-3 sm:h-12"></a>
 
-                <ul class="flex font-medium flex-row space-x-8 ">
+                <ul class="flex font-medium flex-row space-x-4 ">
                     <li>
-                        <a href="/workiee_jobportal/"
-                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-orange-500 lg:bg-transparent lg:text-orange-600 lg:p-0 dark:text-white"
+                        <a href="/CareerLife/"
+                            class="block p-2 text-gray-700 hover:text-white hover:bg-gray-600 lg:bg-transparent lg:text-zinc-600  dark:text-white"
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/companies"
-                            class="<?php echo ($current_page == 'companies.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:hover:text-orange-600 lg:p-0  lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Companies</a>
+                        <a href="/CareerLife/companies"
+                            class="<?php echo ($current_page == 'companies.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>block p-2 text-gray-700 hover:text-white hover:bg-gray-600 lg:bg-transparent lg:text-zinc-600  dark:text-white">Companies</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/jobs"
-                            class="<?php echo ($current_page == 'jobs.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300 hover:text-orange-500 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0  lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Jobs</a>
+                        <a href="/CareerLife/jobs"
+                            class="<?php echo ($current_page == 'jobs.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-600 ' ?>block p-2 text-gray-700 hover:text-white hover:bg-gray-600 lg:bg-transparent lg:text-zinc-600  dark:text-white">Jobs</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/about"
-                            class="<?php echo ($current_page == 'about.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300  hover:text-orange-500 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0  lg:dark:h over:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                        <a href="/CareerLife/about"
+                            class="<?php echo ($current_page == 'about.php') ? 'dark:text-black dark:border-white' : 'dark:text-gray-300 ' ?>block p-2 text-gray-700 hover:text-white hover:bg-gray-600 lg:bg-transparent lg:text-zinc-600  dark:text-white">About</a>
                     </li>
                     <li>
-                        <a href="/workiee_jobportal/contact"
-                            class="<?php echo ($current_page == 'contact.php') ? 'dark:text-black ' : 'dark:text-gray-300 ' ?>block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-300  hover:text-orange-500 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        <a href="/CareerLife/contact"
+                            class="<?php echo ($current_page == 'contact.php') ? 'dark:text-black ' : 'dark:text-gray-300 ' ?>block p-2 text-gray-700 hover:text-white hover:bg-gray-600 lg:bg-transparent lg:text-zinc-600  dark:text-white">Contact</a>
                     </li>
                 </ul>
                 <div>
                     <?php
                     if (isset ($_SESSION['user_id'])) {
                         // User is logged in, show the logout button
-                        echo '<a href="/workiee_jobportal/account/logout.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-orange-600 dark:hover:bg-orange-500 focus:outline-none dark:focus:ring-orange-800">Logout</a>';
+                        echo '<a href="/CareerLife/account/logout.php" class="text-white bg-zinc-500 hover:bg-zinc-600 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-zinc-600 dark:hover:bg-zinc-500 focus:outline-none dark:focus:ring-zinc-800">Logout</a>';
                     } else {
                         // User is not logged in, show the login button
-                        echo '<a href="/workiee_jobportal/account/login" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-orange-600 dark:hover:bg-orange-500 focus:outline-none dark:focus:ring-orange-800">Login</a>';
+                        echo '<a href="/CareerLife/account/login" class="text-white bg-zinc-500 hover:bg-zinc-600 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md text-sm px-4 lg:px-8 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-zinc-600 dark:hover:bg-zinc-500 focus:outline-none dark:focus:ring-zinc-800">Login</a>';
                     }
                     ?>
-                    <a href="/workiee_jobportal/dashboard"
-                        class="text-white bg-orange-500 hover:bg-orange-600 mx-2 focus:ring-4 focus:ring-orange-300 font-medium rounded-md text-sm px-4 lg:px-6 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-orange-600 dark:hover:bg-orange-500 focus:outline-none dark:focus:ring-orange-800">Account</a>
+                    <a href="/CareerLife/dashboard"
+                        class="text-white bg-zinc-500 hover:bg-zinc-600 mx-2 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md text-sm px-4 lg:px-6 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-zinc-600 dark:hover:bg-zinc-500 focus:outline-none dark:focus:ring-zinc-800">Account</a>
                 </div>
             </div>
 

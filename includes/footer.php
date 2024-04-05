@@ -2,16 +2,15 @@
   <div class="mx-auto max-w-screen-2xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
     <div class="text-center">
       <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl">
-        Propagate the Possibilities!</h2>
+      Spread the Opportunities</h2>
 
       <p class="mx-auto mt-6 max-w-xl text-gray-500">
-        Distribute this link among friends and colleagues, and join us in bolstering career growth collectively. Your
-        recommendation might pave the way for someone's significant professional leap!
+      Share this link with friends and colleagues and join us in empowering career growth together. Your referral could be the catalyst for someone's meaningful career advancement
       </p>
 
       <span
-        class="mt-10 inline-block rounded-full border border-white hover:border-orange-600 bg-orange-600 hover:bg-transparent hover:text-black px-12 py-3 text-sm font-medium text-white hover:text-black focus:outline-none focus:ring active:bg-orange-500 cursor-pointer"
-        onclick="shareLink('Workiee - Your own Jobs', 'Check out this amazing job portal!', 'www.Workiee.com')">
+        class="mt-10 inline-block rounded-full border border-white bg-gray-600 hover:bg-transparent hover:bg-transparent hover:text-black px-12 py-3 text-sm font-medium text-white hover:text-black focus:outline-none focus:ring active:bg-gray-400 cursor-pointer"
+        onclick="shareLink('CareerLife- Your own Jobs', 'Check out this amazing job portal!', 'www.CareerLife.com')">
         Share Now
       </span>
     </div>

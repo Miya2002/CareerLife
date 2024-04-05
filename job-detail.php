@@ -20,7 +20,7 @@ if (isset ($_GET['job_id'])) {
   // Redirect to the jobs page if no job ID is provided
   header("Location: jobs.php");
 }
-$pageTitle = $job['title'] . '- Workiee';
+$pageTitle = $job['title'] . '- CareerLife';
 
 include ('includes/header.php')
   ?>

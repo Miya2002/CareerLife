@@ -1,5 +1,6 @@
 tailwind.config = {
     darkMode: 'class',
+    content: [" ./*{html,js.php}"],
     theme: {
       extend: {
         colors: {

@@ -2,22 +2,74 @@
 session_start();
 // Include the configuration file and any necessary functions
 include 'config.php';
-$pageTitle = 'Companies - Workiee';
+$pageTitle = 'Companies - CareerLife';
 include 'includes/header.php';
 // Retrieve all companies from the 'companies' table
 $sql = "SELECT * FROM companies";
 $result = $conn->query($sql);
 ?>
-<section class="bg-orange-100 text-black">
-  <div class="mx-auto max-w-screen-xl px-4 py-28 lg:flex lg:h-1/2 lg:items-center">
-    <div class="mx-auto max-w-3xl text-center">
-      <h1
-        class="bg-gradient-to-r from-blue-800 to-orange-500 bg-clip-text px-4 md:px-0 text-3xl font-extrabold text-transparent sm:text-5xl">
-        Find Best Company <span class="sm:block"> For Your Career! </span>
-      </h1>
-    </div>
+<style>
+  .image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 80%;
+    z-index: 2; /* Ensure the text is above the overlay */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+    z-index: 1;
+  }
+
+  @keyframes light-to-dark {
+    0% {
+      color: #ffffff;
+    }
+
+    100% {
+      color: #333333;
+    }
+  }
+</style>
+
+<div class="image-container" style="width: 100%;">
+  <img src="img/job1.jpg" alt="Image 1" style="width: 100%; height:20%;">
+  
+  <div class="overlay"></div> <!-- Add overlay -->
+  
+  <div class="overlay-text" style="margin-top: 6%;">
+    <h1>
+    Find Best Company
+      <span class="sm:block"> For Your Career! </span>
+    </h1>
   </div>
-</section>
+</div>
+
+
 <div class="mx-auto gap-4 w-full p-8 md:p-10 lg:py-10 lg:px-12 max-w-screen-2xl flex flex-col md:flex-row md:grid md:grid-cols-2 lg:grid-cols-3">
   <?php
   // Check if there are companies to display
@@ -28,7 +80,7 @@ $result = $conn->query($sql);
             class="rounded-lg border border-gray-300 bg-white p-4 w-full shadow-sm transition hover:shadow-lg sm:p-6"
           >
           <div class="flex gap-x-3">
-            <span class="inline-block rounded bg-orange-500 p-2 text-white">
+            <span class="inline-block rounded bg-gray-500 p-2 text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"

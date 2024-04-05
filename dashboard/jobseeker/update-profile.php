@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
   header("Location: /account/login.php");
   exit();
 } else if (($_SESSION['account_type'] !== 'jobseeker')) {
-  header('Location: /workiee_jobportal');
+  header('Location: /CareerLife');
   exit();
 }
 // Get the current user's ID from the session
@@ -93,7 +93,7 @@ if ($result->num_rows > 0) {
             cols="" rows="10"><?php echo $profile['experience'] ?></textarea>
         </div>
         <div>
-          <button name="submit" class="bg-orange-500 hover:bg-orange-600 text-black py-2 px-3 rounded" type="submit">Update Profile</button>
+          <button name="submit" class="bg-gray-400 hover:bg-gray-700 text-black py-2 px-3 rounded" type="submit">Update Profile</button>
         </div>
     </form>
   </div>

@@ -26,11 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Redirect the user to the dashboard or another page after successful login
             if($_SESSION['account_type'] === 'jobseeker'){
                 $message = 'Logged in Successfully! Redirecting...';
-                header("Refresh: $delay; URL=/workiee_jobportal/dashboard/jobseeker");
+                header("Refresh: $delay; URL=/CareerLife/dashboard/jobseeker");
             }
             else if($_SESSION['account_type'] === 'recruiter'){
                 $message = 'Logged in Successfully! Redirecting...';
-                header("Refresh: $delay; URL=/workiee_jobportal/dashboard/recruiter");
+                header("Refresh: $delay; URL=/CareerLife/dashboard/recruiter");
             }
             else{
                 header('Location: /');
@@ -48,13 +48,14 @@ $pageTitle = 'Login - Workiee';
 include '../includes/header.php';
 
 ?>
+
 <section class="relative flex flex-wrap lg:h-screen lg:items-center max-w-screen-2xl mx-auto">
     <div class="w-full px-6 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-12">
         <div class="mx-auto max-w-lg text-center">
-            <h1 class="text-2xl font-bold sm:text-3xl">Welcome Back!</h1>
+            <h1 class="text-2xl font-bold sm:text-3xl">Welcome!</h1>
             <p class="text-gray-800 text-center py-4"><?php echo $message; ?></p>
             <p class="mt-4 text-gray-500">
-                Login Now and Start Visiting your dashboard!
+                Login/Sign in now and begin exploring your dashboard!!
             </p>
         </div>
 
@@ -96,11 +97,11 @@ include '../includes/header.php';
             <div class="flex items-center justify-between">
                 <p class="text-sm text-gray-500">
                     New Here? 
-                    <a class="underline" href="/workiee_jobportal/account/register">Sign up</a>
+                    <a class="underline" href="/CareerLife/account/register">Sign up</a>
                 </p>
 
                 <button type="submit"
-                    class="inline-block rounded-lg bg-orange-500 px-8 py-3 text-sm font-medium text-white">
+                    class="inline-block rounded-lg bg-gray-700 px-8 py-3 text-sm font-medium text-white">
                     Login
                 </button>
             </div>
@@ -108,8 +109,5 @@ include '../includes/header.php';
     </div>
 
     <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
-        <img alt="Welcome"
-            src="https://images.unsplash.com/photo-1630450202872-e0829c9d6172?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            class="absolute inset-0 h-full w-full object-cover" />
-    </div>
+    <a href="https://ibb.co/VtvJV5g"><img src="https://i.ibb.co/t4bQBFq/job-search-computer-application-search-new-vacancies-website.jpg" alt="job-search-computer-application-search-new-vacancies-website" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>upload</a><br />
 </section>
